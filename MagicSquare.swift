@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+// This function generates a magic square
 func genSquare(square: [Int], currentSquare: [Int], index: Int) {
     var nonLetSquare: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     var nonLetCurrentSquare: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -28,6 +30,7 @@ func genSquare(square: [Int], currentSquare: [Int], index: Int) {
     }
 }
 
+// This function tests weather a generated square is indeed a magic square
 func isMagic(preSquare: [Int]) -> Bool {
     // returns true or false for whether or not array is a magic square
     let row1: Int = preSquare[0] + preSquare[1] + preSquare[2]
@@ -44,6 +47,7 @@ func isMagic(preSquare: [Int]) -> Bool {
         && col3 == MAGICNUM && diag1 == MAGICNUM && diag2 == MAGICNUM
 }
 
+// This function prints magic squares in a neat format
 func printMagicSquare(outputSquare: [Int]) {
     print("\n*****")
     for count in 0..<9 {
